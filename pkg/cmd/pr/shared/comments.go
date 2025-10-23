@@ -99,7 +99,8 @@ func formatComment(io *iostreams.IOStreams, comment Comment, newest bool) (strin
 		fmt.Fprint(&b, formatCommentStatus(cs, comment.Status()))
 	}
 	if comment.Association() != "NONE" {
-		fmt.Fprint(&b, cs.Boldf(" (%s)", strings.Title(strings.ToLower(comment.Association()))))
+		associationTitle := strings.Title(strings.ToLower(comment.Association()))
+		fmt.Fprint(&b, cs.Boldf(" (%s)", associationTitle))
 	}
 	fmt.Fprint(&b, cs.Boldf(" • %s", utils.FuzzyAgoAbbr(time.Now(), comment.Created())))
 	if comment.IsEdited() {
