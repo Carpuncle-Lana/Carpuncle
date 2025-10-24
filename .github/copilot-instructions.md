@@ -119,7 +119,7 @@ Verwende folgende Labels für Issues und PRs:
 ### Phase 1: Identität & Infrastruktur
 - OneDrive & Google Drive Integration
 - Geräteunabhängiges Geräte-Syncri
-- Alias-Verwaltung: `carpuncle-pc@live.de`, `thoma@carpuncle.eu`, `carpV@carpuncle.eu`
+- Alias-Verwaltung: `carpuncle-pc@live.de`, `thomas@carpuncle.eu`, `carpV@carpuncle.eu`
 
 ### Phase 2: Entwickler-Engine
 - Multi-Language Support

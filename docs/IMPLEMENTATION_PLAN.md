@@ -25,7 +25,7 @@ Die Carpuncle Cloud wird in 6 Phasen implementiert:
 
 - **Email-Adressen**:
   - `carpuncle-pc@live.de` (Microsoft 365)
-  - `thoma@carpuncle.eu` (Domain)
+  - `thomas@carpuncle.eu` (Domain)
   - `carpV@carpuncle.eu` (Alternative)
   
 - **Cloud-Integration**:
