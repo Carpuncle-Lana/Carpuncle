@@ -84,6 +84,9 @@ func viewRun(opts *ViewOptions) error {
 	}
 	if opts.IO.CanPrompt() && opts.SelectorArg == "" {
 		baseRepo, err := opts.BaseRepo()
+		if err != nil {
+			return err
+		}
 		issueNumber, err := issueShared.SelectFrecent(httpClient, baseRepo)
 		if err != nil {
 			return err
