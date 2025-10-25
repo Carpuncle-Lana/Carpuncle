@@ -78,8 +78,8 @@ func deleteRun(opts *DeleteOptions) error {
 
 	err = shared.UpdateFrecent(issue.Number)
 	if err != nil {
-		// TODO just warn or ignore or whatever
-		return err
+		fmt.Fprintf(opts.IO.ErrOut, "%s Warning: failed to update recent issues: %v\n", cs.Yellow("!"), err)
+		// continue execution; frecent tracking is non-critical
 	}
 
 	// When executed in an interactive shell, require confirmation. Otherwise skip confirmation.
