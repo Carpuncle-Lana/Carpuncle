@@ -138,6 +138,9 @@ func editRun(opts *EditOptions) error {
 	apiClient := api.NewClientFromHTTP(httpClient)
 	if opts.IO.CanPrompt() && opts.SelectorArg == "" {
 		baseRepo, err := opts.BaseRepo()
+		if err != nil {
+			return err
+		}
 		issueNumber, err := shared.SelectFrecent(httpClient, baseRepo)
 		if err != nil {
 			return err
