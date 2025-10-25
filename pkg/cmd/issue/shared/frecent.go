@@ -152,7 +152,7 @@ func defaultFrecentPath() string {
 }
 
 func getFrecentEntry(stateFilePath string) (*FrecentEntry, error) {
-	content, err := ioutil.ReadFile(stateFilePath)
+	content, err := os.ReadFile(stateFilePath)
 	if err != nil {
 		if os.IsNotExist(err) {
 			return &FrecentEntry{Issues: make(map[int]*CountEntry)}, nil
