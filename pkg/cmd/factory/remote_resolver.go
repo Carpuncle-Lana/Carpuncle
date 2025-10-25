@@ -71,7 +71,7 @@ func (rr *remoteResolver) Resolver() func() (context.Remotes, error) {
 
 		// Filter again by default host if one is set
 		// For config file default host fallback to cachedRemotes if none match
-		// For enviornment default host (GH_HOST) do not fallback to cachedRemotes if none match
+		// For environment default host (GH_HOST) do not fallback to cachedRemotes if none match
 		if src != "" {
 			filteredRemotes := cachedRemotes.FilterByHosts([]string{defaultHost})
 			if config.IsHostEnv(src) || len(filteredRemotes) > 0 {
