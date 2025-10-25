@@ -76,6 +76,9 @@ func sortByFrecent(issues []api.Issue, frecent map[int]*CountEntry) []string {
 			CountEntry: *entry,
 		})
 	}
+	if len(withStats) == 0 {
+		return []string{}
+	}
 	sort.Sort(ByLastAccess(withStats))
 	previousIssue := withStats[0]
 	withStats = withStats[1:]
