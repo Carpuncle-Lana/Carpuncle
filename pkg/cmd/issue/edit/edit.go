@@ -154,8 +154,8 @@ func editRun(opts *EditOptions) error {
 	}
 	err = shared.UpdateFrecent(issue.Number)
 	if err != nil {
-		// TODO just warn or ignore or whatever
-		return err
+		fmt.Fprintf(opts.IO.ErrOut, "warning: failed to update recent issues: %v\n", err)
+		// continue; do not fail the command on frecent tracking error
 	}
 
 	editable := opts.Editable
