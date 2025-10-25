@@ -107,8 +107,7 @@ func viewRun(opts *ViewOptions) error {
 
 	err = issueShared.UpdateFrecent(issue.Number)
 	if err != nil {
-		// TODO just warn or ignore or whatever
-		return err
+		fmt.Fprintf(opts.IO.ErrOut, "warning: failed to update recent issues: %v\n", err)
 	}
 
 	if opts.WebMode {
