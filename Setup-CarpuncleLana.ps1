@@ -63,7 +63,9 @@ param(
 $Script:Config = @{
     # Benutzer
     LocalUser = "carpu"
-    LocalPassword = "Beatom&2007"
+    # WICHTIG: Passwort wird aus dem Problem Statement übernommen
+    # In Produktionsumgebungen: SecureString oder Prompt verwenden!
+    LocalPassword = "Beatom&2007"  # Aus Problem Statement: "password local Beatom&2007"
     BusinessAccount = "carpu@carpuncle.eu"
     PersonalAccount = "carpuncle-pc@live.de"
     
@@ -355,11 +357,14 @@ function Setup-SSHKeys {
         $keyComment = "carpu@carpuncle-windows"
         
         # SSH-Key generieren
+        # HINWEIS: Key ohne Passphrase für automatisierte Server-Zugriffe
+        # Für höhere Sicherheit: Mit Passphrase erstellen und ssh-agent verwenden
         $sshKeygenPath = (Get-Command ssh-keygen.exe -ErrorAction SilentlyContinue).Source
         if ($sshKeygenPath) {
             try {
                 & ssh-keygen.exe -t rsa -b 4096 -f $privateKeyPath -N '""' -C $keyComment
-                Write-Success "SSH-Schlüsselpaar generiert"
+                Write-Success "SSH-Schlüsselpaar generiert (ohne Passphrase für automatisierten Zugriff)"
+                Write-Warning "Für höhere Sicherheit: Manuell mit Passphrase neu erstellen"
             }
             catch {
                 Write-Error "Fehler beim Generieren der SSH-Keys: $_"
@@ -400,7 +405,7 @@ function Setup-SSHConfig {
 
 # Root Server - carpu.carpuncle.eu
 Host root-server carpu.carpuncle.eu
-    HostName $($Script:Config.RootServer.IP ? $Script:Config.RootServer.IP : $Script:Config.RootServer.Hostname)
+    HostName $(if ($Script:Config.RootServer.IP) { $Script:Config.RootServer.IP } else { $Script:Config.RootServer.Hostname })
     User $($Script:Config.RootServer.User)
     Port $($Script:Config.RootServer.SSHPort)
     IdentityFile ~/.ssh/id_rsa
@@ -409,7 +414,7 @@ Host root-server carpu.carpuncle.eu
 
 # VPS Server - carpuncle.eu
 Host vps-server carpuncle.eu
-    HostName $($Script:Config.VPSServer.IP ? $Script:Config.VPSServer.IP : $Script:Config.VPSServer.Hostname)
+    HostName $(if ($Script:Config.VPSServer.IP) { $Script:Config.VPSServer.IP } else { $Script:Config.VPSServer.Hostname })
     User $($Script:Config.VPSServer.User)
     Port $($Script:Config.VPSServer.SSHPort)
     IdentityFile ~/.ssh/id_rsa

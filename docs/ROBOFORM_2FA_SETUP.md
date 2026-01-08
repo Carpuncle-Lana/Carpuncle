@@ -48,8 +48,9 @@ RoboForm wird als zentraler Passwort-Manager verwendet für:
 Name: Windows - Benutzer carpu
 URL: -
 Benutzername: carpu
-Passwort: Beatom&2007
+Passwort: [Ihr lokales Passwort - siehe Setup-Skript]
 Notizen: Lokaler Windows-Benutzer, automatisches Login aktiviert
+         HINWEIS: Passwort aus Setup-CarpuncleLana.ps1 übernehmen
 ```
 
 #### Microsoft Business
