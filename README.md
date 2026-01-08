@@ -5,11 +5,32 @@
 
 Willkommen bei **Carpuncle**, dem KI-Framework für automatisierte Cloud-Workflows, Webhooks und Datenanalyse.
 
+## ⚡ Vollautomatisches System-Setup - Ein Befehl für alles!
+
+**NEU**: Richten Sie Ihre komplette Carpuncle-Entwicklungsumgebung mit einem einzigen Befehl ein!
+
+```powershell
+# PowerShell als Administrator öffnen und ausführen:
+irm https://raw.githubusercontent.com/Isychan1/Carpuncle/main/Install-Carpuncle.ps1 | iex
+```
+
+Das richtet automatisch ein:
+- ✅ Windows-Benutzer `carpu` mit Auto-Login
+- ✅ Komplette Verzeichnisstruktur auf `T:\Carpuncle`
+- ✅ SSH-Keys für passwortlosen Server-Zugriff
+- ✅ Zwei Microsoft-Konten harmonisch integriert
+- ✅ OneDrive (Business + Personal), Git, GitHub CLI
+- ✅ Server-Verbindungen (Root-Server, VPS, Webhosting)
+- ✅ Lana KI-System Grundlage
+
+📖 **Vollständige Anleitung**: [AUTOMATION-README.md](AUTOMATION-README.md)
+
 ## 🚀 Projekte
 
 - **Carpuncle-Cloud**: Azure-basierte Infrastruktur mit Dashboard
 - **lana-core**: KI-Module für Lana (selbstlernende KI-Assistenz)
 - **dotnet**: Backend-Services in .NET
+- **Vollautomatisches System**: Ein-Befehl-Setup für Windows-Workstation
 
 ## 🔐 Technologien
 
@@ -17,8 +38,19 @@ Willkommen bei **Carpuncle**, dem KI-Framework für automatisierte Cloud-Workflo
 - Node.js 18
 - GitHub Actions & GitHub Copilot
 - Microsoft Graph API
+- SSH-Key-basierte Authentifizierung
+- Windows Terminal mit Chat-Integration
 
 ## 📦 Quick Start
+
+### Vollautomatisches Workstation-Setup
+
+```powershell
+# Ein Befehl - alles eingerichtet!
+irm https://raw.githubusercontent.com/Isychan1/Carpuncle/main/Install-Carpuncle.ps1 | iex
+```
+
+Siehe [`AUTOMATION-README.md`](AUTOMATION-README.md) für Details.
 
 ### Azure Deployment
 
