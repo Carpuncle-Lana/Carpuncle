@@ -2,7 +2,13 @@
 
 # Manage go-licenses version externally for CI
 if [ "$CI" != "true" ]; then
-    go install github.com/google/go-licenses@latest
+    go install github.com/google/go-licenses/v2@latest
+fi
+
+# Verify go-licenses is available
+if ! command -v go-licenses &> /dev/null; then
+    echo "Error: go-licenses is not installed or not on PATH"
+    exit 1
 fi
 
 # Setup temporary directory to collect updated third-party source code
