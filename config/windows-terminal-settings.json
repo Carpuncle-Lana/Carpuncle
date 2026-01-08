@@ -1,0 +1,149 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": [
+        {
+            "command": {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+c"
+        },
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+d"
+        }
+    ],
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "profiles": {
+        "defaults": {
+            "font": {
+                "face": "Cascadia Code",
+                "size": 11
+            },
+            "colorScheme": "Carpuncle Dark"
+        },
+        "list": [
+            {
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "name": "Carpuncle PowerShell",
+                "commandline": "pwsh.exe -NoLogo -NoExit -Command \"& { if (Test-Path $env:CARPUNCLE_ROOT\\Lana\\Config\\LanaProfile.ps1) { . $env:CARPUNCLE_ROOT\\Lana\\Config\\LanaProfile.ps1 } }\"",
+                "startingDirectory": "T:\\Carpuncle",
+                "icon": "T:\\Carpuncle\\Lana\\Config\\lana-icon.png",
+                "tabTitle": "🧠 Carpuncle Lana",
+                "colorScheme": "Carpuncle Dark"
+            },
+            {
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "PowerShell 7",
+                "commandline": "pwsh.exe -NoLogo",
+                "startingDirectory": "T:\\Carpuncle",
+                "hidden": false
+            },
+            {
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "name": "Windows PowerShell",
+                "commandline": "powershell.exe",
+                "hidden": false
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+                "name": "Git Bash",
+                "commandline": "T:\\Carpuncle\\Tools\\git\\bin\\bash.exe",
+                "startingDirectory": "T:\\Carpuncle",
+                "icon": "T:\\Carpuncle\\Tools\\git\\mingw64\\share\\git\\git-for-windows.ico",
+                "hidden": false
+            },
+            {
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "name": "SSH → Root-Server",
+                "commandline": "pwsh.exe -NoExit -Command ssh root-server",
+                "tabTitle": "📡 Root-Server",
+                "icon": "🖥️"
+            },
+            {
+                "guid": "{3c5ef123-49c8-62df-c051-3420b108f629}",
+                "name": "SSH → VPS",
+                "commandline": "pwsh.exe -NoExit -Command ssh vps-server",
+                "tabTitle": "📡 VPS",
+                "icon": "🖥️"
+            },
+            {
+                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+                "name": "Ubuntu-20.04",
+                "source": "Windows.Terminal.Wsl",
+                "hidden": true
+            }
+        ]
+    },
+    "schemes": [
+        {
+            "name": "Carpuncle Dark",
+            "background": "#0C0C0C",
+            "foreground": "#CCCCCC",
+            "black": "#0C0C0C",
+            "red": "#E74856",
+            "green": "#16C60C",
+            "yellow": "#F9F1A5",
+            "blue": "#3B78FF",
+            "purple": "#B4009E",
+            "cyan": "#61D6D6",
+            "white": "#CCCCCC",
+            "brightBlack": "#767676",
+            "brightRed": "#E74856",
+            "brightGreen": "#16C60C",
+            "brightYellow": "#F9F1A5",
+            "brightBlue": "#3B78FF",
+            "brightPurple": "#B4009E",
+            "brightCyan": "#61D6D6",
+            "brightWhite": "#F2F2F2",
+            "cursorColor": "#FFFFFF",
+            "selectionBackground": "#FFFFFF"
+        },
+        {
+            "name": "Carpuncle Light",
+            "background": "#FFFFFF",
+            "foreground": "#0C0C0C",
+            "black": "#0C0C0C",
+            "red": "#C50F1F",
+            "green": "#13A10E",
+            "yellow": "#C19C00",
+            "blue": "#0037DA",
+            "purple": "#881798",
+            "cyan": "#3A96DD",
+            "white": "#CCCCCC",
+            "brightBlack": "#767676",
+            "brightRed": "#E74856",
+            "brightGreen": "#16C60C",
+            "brightYellow": "#F9F1A5",
+            "brightBlue": "#3B78FF",
+            "brightPurple": "#B4009E",
+            "brightCyan": "#61D6D6",
+            "brightWhite": "#F2F2F2",
+            "cursorColor": "#0C0C0C",
+            "selectionBackground": "#CCCCCC"
+        }
+    ],
+    "themes": [],
+    "startOnUserLogin": true,
+    "launchMode": "maximized"
+}
