@@ -1,39 +1,140 @@
-# 🧠 Carpuncle Cloud
+# 🧠 Carpuncle Lana System
 
 [![Azure Deployment](https://github.com/Carpuncle-Lana/Carpuncle/workflows/Azure%20Carpuncle%20Cloud%20Deployment/badge.svg)](https://github.com/Carpuncle-Lana/Carpuncle/actions)
 [![Security Scan](https://github.com/Carpuncle-Lana/Carpuncle/workflows/CodeQL/badge.svg)](https://github.com/Carpuncle-Lana/Carpuncle/security)
 
-Willkommen bei **Carpuncle**, dem KI-Framework für automatisierte Cloud-Workflows, Webhooks und Datenanalyse.
+Willkommen bei **Carpuncle Lana** – Ein vollautomatisiertes System, das Windows, Server, Cloud-Storage und KI-Assistenz nahtlos und passwortlos integriert.
 
-## 🚀 Projekte
+> **🚀 Ein Skript, eine Lösung** – Kopieren, Enter drücken, fertig!
+
+## ⚡ Schnellstart - Ein-Klick-Installation
+
+```powershell
+# PowerShell als Administrator öffnen, dann:
+.\Setup-CarpuncleLana.ps1
+```
+
+Das war's! Das System richtet automatisch ein:
+- ✅ Benutzer `carpu` mit passwortlosem Login
+- ✅ Vollständige Verzeichnisstruktur unter `T:\Carpuncle`
+- ✅ SSH-Schlüssel für Server-Zugriff
+- ✅ Integration mit Root-Server, VPS und Webhosting
+- ✅ Lana KI-Assistentin Framework
+- ✅ OneDrive Business + Personal Vorbereitung
+- ✅ Windows Terminal Konfiguration
+
+**➡️ [Ausführliche Schnellstart-Anleitung](SCHNELLSTART.md)**
+
+## 🧠 Was ist Lana?
+
+**Lana** ist die zentrale KI-Assistentin des Carpuncle-Systems:
+
+- 🤖 **Automatische Problemlösung** – Problem im Terminal-Chat eingeben, Lana behebt es automatisch
+- 🔄 **Self-Healing** – Erkennt und behebt System-Fehler selbstständig
+- 🖥️ **Terminal-Integration** – Direkt im Windows Terminal verfügbar
+- 🌐 **Multi-Server-Management** – Koordiniert Windows, Root-Server, VPS und Cloud
+- 🔐 **Passwortlose Authentifizierung** – SSH-Keys für alle Server-Verbindungen
+
+```powershell
+# Lana verwenden
+lana "Wie behebe ich diesen Build-Fehler?"
+lana-fix                    # Automatische Problembehebung
+lana-status                 # System-Status anzeigen
+```
+
+## 🎯 Systemarchitektur
+
+```
+┌──────────────────────────────────────────────────────────┐
+│              CARPUNCLE LANA SYSTEM                       │
+└──────────────────────────────────────────────────────────┘
+                        │
+        ┌───────────────┼───────────────┐
+        ▼               ▼               ▼
+   [Windows]      [Root Server]     [VPS]
+   Enterprise     3TB + 500GB       Win 2025
+   T:\Carpuncle   carpu.carpuncle   carpuncle.eu
+        │               .eu               │
+        └───────────────┴────────────────┘
+                        │
+                [Webhosting]
+                lana-ki.de
+                carpucloud.de
+```
+
+## 🚀 Features
+
+### Vollautomatisches Setup
+- **Ein Skript** für die komplette Konfiguration
+- **Passwortloses Login** – Automatisch als Benutzer `carpu`
+- **Dev-Drive Setup** – ReFS für optimale Performance
+- **Tool-Integration** – Alle Entwicklungstools vorinstalliert
+
+### Multi-Account Integration
+- **Business**: carpu@carpuncle.eu (Copilot Business, Azure, SharePoint)
+- **Personal**: carpuncle-pc@live.de (Copilot Pro, OneDrive)
+- **Harmonische Zusammenarbeit** – Beide Konten auf User `carpu`
+
+### Server-Integration
+- **Root-Server** – 3TB Hauptdaten + 500GB Cache/Snapshots
+- **VPS** – Windows Server 2025 für Anwendungen
+- **Webhosting** – lana-ki.de, carpuncle.eu, carpucloud.de
+- **VLAN** – Direkte Netcup-Verbindung
+
+### Lana AI-Assistentin
+- **Chat-API** im Windows Terminal
+- **Automatische Fehlerbehandlung**
+- **System-Überwachung**
+- **Recovery-System** (EFI/PE Integration)
+
+## 📦 Projekte
 
 - **Carpuncle-Cloud**: Azure-basierte Infrastruktur mit Dashboard
-- **lana-core**: KI-Module für Lana (selbstlernende KI-Assistenz)
+- **Lana-Core**: KI-Module für Lana (selbstlernende KI-Assistenz)
 - **dotnet**: Backend-Services in .NET
 
 ## 🔐 Technologien
 
-- Azure CLI & PowerShell 7
-- Node.js 18
-- GitHub Actions & GitHub Copilot
+- PowerShell 7 & Azure CLI
+- Node.js, Python, Go, .NET
+- GitHub Actions & GitHub Copilot (Business + Pro)
 - Microsoft Graph API
+- SSH-Key-basierte Authentifizierung
+- RoboForm 2FA Integration
 
-## 📦 Quick Start
+## 📦 Verfügbare Skripte
 
-### Azure Deployment
+| Skript | Beschreibung |
+|--------|-------------|
+| `Setup-CarpuncleLana.ps1` | **Haupt-Setup** – Richtet das komplette System ein |
+| `Initialize-LanaFramework.ps1` | **Lana Framework** – Initialisiert Lana AI-Assistentin |
+| `Connect-CarpuncleServers.ps1` | **Server-Manager** – Verbindung zu Root-Server, VPS, Webhosting |
+| `Deploy-AzureCarpuncle.ps1` | **Azure Deployment** – Deployed Cloud-Infrastruktur |
+
+## 📚 Dokumentation
+
+- 🚀 **[Schnellstart-Anleitung](SCHNELLSTART.md)** – Sofort loslegen!
+- 📖 **[Vollständige Systemdokumentation](docs/CARPUNCLE_LANA_SYSTEM.md)** – Architektur, Konfiguration, Nutzung
+- 📋 **[Implementierungsplan](docs/IMPLEMENTATION_PLAN.md)** – 6-Phasen-Strategie
+- ⚙️ **[GitHub Copilot Instructions](.github/copilot-instructions.md)** – Copilot-Konfiguration
+
+## 🔧 Tägliche Nutzung
 
 ```powershell
-# Automatisiertes Azure-Deployment
-.\Deploy-AzureCarpuncle.ps1 -Environment dev -Location westeurope
+# Server-Verbindungen (passwortlos)
+ssh root-server             # Root-Server
+ssh vps-server             # VPS
+
+# Lana AI-Assistentin
+lana "Problem beschreibung"
+lana-fix
+
+# Azure Management
+.\Deploy-AzureCarpuncle.ps1 -Environment prod
+
+# Server-Status prüfen
+.\Connect-CarpuncleServers.ps1 -Action Test -ServerType All
 ```
-
-Siehe [`Deploy-AzureCarpuncle.ps1`](Deploy-AzureCarpuncle.ps1) für detailliertes automatisiertes Deployment.
-
-### Dokumentation
-
-- 📖 [Implementierungsplan](docs/IMPLEMENTATION_PLAN.md) - 6-Phasen-Strategie
-- ⚙️ [GitHub Copilot Instructions](.github/copilot-instructions.md) - Copilot-Konfiguration
-- 🔄 [CI/CD Workflow](.github/workflows/azure-deploy.yml) - Azure Deployment Pipeline
 
 ## 🧭 Organisationsstruktur
 
